@@ -22,7 +22,13 @@ class HomeViewBody extends StatelessWidget {
           SliverToBoxAdapter(
             child: LayoutBuilder(
               builder: (context , constraints) {
-                return const CustomSliverGrid();
+
+                if(constraints.maxWidth > 600){
+       //    return const CustomSliverGrid();
+return Text('Tablet layout');
+                }else{
+                    return const CustomSliverGrid();
+                }
               }
             ),
           ),
