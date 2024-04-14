@@ -20,8 +20,11 @@ class CustomDrawer extends StatelessWidget {
       elevation: 0,
       backgroundColor:Color(0xffDBDBDB),
       child: Column(children: [
-       DrawerHeader(child: Icon(FontAwesomeIcons.solidHeart, size: 48)),
+       DrawerHeader(child: Icon(FontAwesomeIcons.solidHeart, size: 56)),
         //  CustomDrawerItem(),
+        SizedBox(
+          height: 16,
+        ),
         CustomDrawerItemsListView(items: items),
       ]),
     );
