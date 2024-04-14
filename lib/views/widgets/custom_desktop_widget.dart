@@ -11,7 +11,12 @@ class CustomDesktopWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Column(
-      children: [Expanded(child: CustomItem()),Expanded(child: CustomItem2())
+      children: [
+        Expanded(
+        flex: 2,
+        child: CustomItem()),
+        SizedBox(height: 16,),
+        Expanded(child: CustomItem2())
       ],
     );
   }

@@ -19,12 +19,12 @@ class HomeViewBody extends StatelessWidget {
         horizontal: 16,
       ),
       child: LayoutBuilder(builder: (context, constraints) {
-        if (constraints.maxWidth > 600) {
-          return const TabletLayout();
-        }  else if(constraints.maxWidth > 900){
-          return const DesktopLayout();
-        } else {
+        if (constraints.maxWidth < 600) {
           return const MobileLayout();
+        }  else if(constraints.maxWidth < 900){
+          return const TabletLayout();
+        } else {
+          return const DesktopLayout();
         }
       }),
     );
