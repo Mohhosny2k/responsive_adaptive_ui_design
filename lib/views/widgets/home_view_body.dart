@@ -5,6 +5,7 @@ import 'package:responsive_adaptive_ui_design/views/widgets/custom_list.dart';
 import 'package:responsive_adaptive_ui_design/views/widgets/custom_list_view.dart';
 
 import 'custom_sliver_grid.dart';
+import 'desktop_layout.dart';
 import 'mobile_layout.dart';
 import 'tablet_layout.dart';
 
@@ -20,6 +21,8 @@ class HomeViewBody extends StatelessWidget {
       child: LayoutBuilder(builder: (context, constraints) {
         if (constraints.maxWidth > 600) {
           return const TabletLayout();
+        }  else if(constraints.maxWidth > 900){
+          return const DesktopLayout();
         } else {
           return const MobileLayout();
         }
