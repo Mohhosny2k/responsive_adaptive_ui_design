@@ -19,6 +19,7 @@ class HomeViewBody extends StatelessWidget {
         horizontal: 16,
       ),
       child: LayoutBuilder(builder: (context, constraints) {
+        print('layout builder width =${constraints.maxWidth}');
         if (constraints.maxWidth < 600) {
           return const MobileLayout();
         }  else if(constraints.maxWidth < 900){

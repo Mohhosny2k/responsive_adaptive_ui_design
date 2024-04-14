@@ -18,7 +18,13 @@ class _HomeViewState extends State<HomeView> {
       key: scaffoldKey,
       drawer: const CustomDrawer(),
       backgroundColor: const Color(0xffDBDBDB),
-      appBar:MediaQuery.sizeOf(context).width< 900 ? AppBar(
+      appBar:buildAppBar(context),
+      body: const HomeViewBody(),
+    );
+  }
+  AppBar? buildAppBar(BuildContext context) {
+    print('media query width =${MediaQuery.sizeOf(context).width}');
+return  MediaQuery.sizeOf(context).width -32< 900 ? AppBar(
           backgroundColor: Colors.black,
           leading: GestureDetector(
               onTap: () {
@@ -28,11 +34,11 @@ class _HomeViewState extends State<HomeView> {
                 Icons.menu,
                 color: Colors.white,
               )),
-        ) :null,
-      body: const HomeViewBody(),
-    );
-  }
+        ) :null;
+  
+} 
 }
+
 
 // class CustomAdaptiveAppBar extends StatelessWidget
 //     implements PreferredSizeWidget {
