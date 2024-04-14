@@ -15,9 +15,13 @@ class CustomDrawerItem extends StatelessWidget {
       ),
       title: Padding(
         padding:const  EdgeInsets.only(left: 16),
-        child: Text(
-          drawerItemModel.title, //D A S H B O A R D
-          style:const TextStyle(color: Colors.black),
+        child: FittedBox(
+          alignment: Alignment.centerLeft,
+          fit: BoxFit.scaleDown,
+          child: Text(
+            drawerItemModel.title, //D A S H B O A R D
+            style:const TextStyle(color: Colors.black),
+          ),
         ),
       ),
     );
