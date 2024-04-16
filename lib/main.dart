@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 
@@ -53,7 +55,8 @@ double getResponsiveFontSize(BuildContext context, {required double fontSize}) {
   double responsiveFontSize = fontSize * scalefactor;
   double lowerLimit = fontSize * .8;
   double upperLimit = fontSize * 1.2;
-return  responsiveFontSize.clamp(lowerLimit, upperLimit);
+  log('base font size = $fontSize, scale factor = $scalefactor, responsive font size = $responsiveFontSize, lower limit = $lowerLimit, upper limit = $upperLimit    final font size ${responsiveFontSize.clamp(lowerLimit, upperLimit)}');
+  return responsiveFontSize.clamp(lowerLimit, upperLimit);
 }
 
 double getScaleFactor(BuildContext context) {
