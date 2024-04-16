@@ -37,3 +37,7 @@ class MyApp extends StatelessWidget {
 // responsive fontsize
 // min max font size
 //double getResponsiveFontSize({required double fontSize}){}
+
+
+// scale factor = widthScreen / widthPlatform
+// responsiveFontSize = fontSize * scalefactor
