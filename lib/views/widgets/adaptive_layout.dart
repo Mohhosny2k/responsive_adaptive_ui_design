@@ -6,7 +6,7 @@ final WidgetBuilder mobileLayout,tabletLayout,desktopLayout;
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
-        print('layout builder width =${constraints.maxWidth}');
+     //   print('layout builder width =${constraints.maxWidth}');
         if (constraints.maxWidth < 600) {
           return  mobileLayout(context);
         }  else if(constraints.maxWidth < 900){

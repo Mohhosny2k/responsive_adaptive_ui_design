@@ -23,7 +23,7 @@ class _HomeViewState extends State<HomeView> {
     );
   }
   AppBar? buildAppBar(BuildContext context) {
-    print('media query width =${MediaQuery.sizeOf(context).width}');
+   // print('media query width =${MediaQuery.sizeOf(context).width}');
 return  MediaQuery.sizeOf(context).width -32< 900 ? AppBar(
           backgroundColor: Colors.black,
           leading: GestureDetector(
